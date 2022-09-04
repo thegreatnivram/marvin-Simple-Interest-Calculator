@@ -2,16 +2,20 @@ function compute()
 {
     const d = new Date();
     let year = d.getFullYear();
-    rate = parseFloat(document.getElementById("tasa").value);
-    principal = parseFloat(document.getElementById("principal").value);
     amountofyears = parseInt(document.getElementById("years").value);
-    targetyear = parseInt(year) + amountofyears; 
-    totalresult = Math.round(principal * ((rate / 100)* amountofyears));
-    document.getElementById("showprincipal").innerHTML = principal;
-    document.getElementById("showrate").innerHTML = rate;
-    document.getElementById("showyear").innerHTML = targetyear;
-    document.getElementById("showresult").innerHTML =  totalresult;
-    myFunction();
+    principal = parseFloat(document.getElementById("principal").value);
+    if (principal>1) {
+        rate = parseFloat(document.getElementById("tasa").value);
+        targetyear = parseInt(year) + amountofyears; 
+        totalresult = Math.round(principal * ((rate / 100)* amountofyears));
+        document.getElementById("showprincipal").innerHTML = principal;
+        document.getElementById("showrate").innerHTML = rate;
+        document.getElementById("showyear").innerHTML = targetyear;
+        document.getElementById("showresult").innerHTML =  totalresult;
+        myFunction();    
+    } else {
+        window.alert("You need to enter a positive number as Amount");
+      }
     
 }
 function show_value(x)
