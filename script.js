@@ -14,7 +14,7 @@ function compute()
         document.getElementById("showresult").innerHTML =  totalresult;
         myFunction();    
     } else {
-
+        document.getElementById("principal").focus();
         window.alert("You need to enter a positive number as Amount");
         document.getElementById("principal").focus();
       }
