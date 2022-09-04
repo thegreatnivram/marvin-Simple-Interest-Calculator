@@ -4,15 +4,21 @@ function compute()
     let year = d.getFullYear();
     amountofyears = parseInt(document.getElementById("years").value);
     principal = parseFloat(document.getElementById("principal").value);
-    if (principal>1) {
-        rate = parseFloat(document.getElementById("tasa").value);
-        targetyear = parseInt(year) + amountofyears; 
-        totalresult = Math.round(principal * ((rate / 100)* amountofyears));
-        document.getElementById("showprincipal").innerHTML = principal;
-        document.getElementById("showrate").innerHTML = rate;
-        document.getElementById("showyear").innerHTML = targetyear;
-        document.getElementById("showresult").innerHTML =  totalresult;
-        myFunction();    
+    if (principal > 1) {
+        if (amountofyears>0) {
+            rate = parseFloat(document.getElementById("tasa").value);
+            targetyear = parseInt(year) + amountofyears; 
+            totalresult = Math.round(principal * ((rate / 100)* amountofyears));
+            document.getElementById("showprincipal").innerHTML = principal;
+            document.getElementById("showrate").innerHTML = rate;
+            document.getElementById("showyear").innerHTML = targetyear;
+            document.getElementById("showresult").innerHTML =  totalresult;
+            myFunction();    
+        } else {
+            document.getElementById("years").focus();
+            window.alert("You need to enter a positive number as years");
+            document.getElementById("years").focus();
+        }
     } else {
         document.getElementById("principal").focus();
         window.alert("You need to enter a positive number as Amount");
