@@ -1,5 +1,6 @@
 <html>
     <head>
+    <title>Web App – Simple Interest Calculator</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     </head>
@@ -12,13 +13,13 @@
         <h2><span class="tab"></span>Interest Rate<span class="tab"></span>
         <input type="range" min="0" max="20" step="0.5" id="tasa" name="sld3" value="10" onchange="show_value(this.value);">
         <span id="rate_value" style="color:rgb(13, 12, 12);"></span><br/></h2>
-        <h2><span class="tab"></span>No. of Years <input type="number"  id="years">  <br/></h2>
+        <h2><span class="tab"></span>No. of Years <input type="number"  id="years"><br/></h2>
         <span class="tab"></span><button onclick="compute()">Compute Interest</button><br/>     
         <div id="resulting" style="display: none;"><h2>
-        <span class="tab"></span>If you deposit <span id="showprincipal" style="color:rgb(13, 12, 12);"></span><br/>
-        <span class="tab"></span>at an interest rate of <span id="showrate" style="color:rgb(13, 12, 12);"></span>%<br/>
-        <span class="tab"></span>You will receive an amount of <span id="showresult" style="color:rgb(13, 12, 12);"></span>,<br/>
-        <span class="tab"></span>in the year <span id="showyear" style="color:rgb(13, 12, 12);"></span><br/><br/>
+        <span class="tab"></span>If you deposit <span style="background-color: #FFFF00" id="showprincipal" style="color:rgb(13, 12, 12);"></span><br/>
+        <span class="tab"></span>at an interest rate of <span style="background-color: #FFFF00" id="showrate" style="color:rgb(13, 12, 12);"></span>%<br/>
+        <span class="tab"></span>You will receive an amount of <span style="background-color: #FFFF00" id="showresult" style="color:rgb(13, 12, 12);"></span>,<br/>
+        <span class="tab"></span>in the year <span style="background-color: #FFFF00" id="showyear" style="color:rgb(13, 12, 12);"></span><br/><br/>
         © Everyone Can Get Rich
         </h2>
         </section>
